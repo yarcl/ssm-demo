@@ -1,0 +1,10 @@
+.git
+.idea
+target/
+ocr-project.iml
+ocr/target/
+ocr/.idea/
+ocr/ocr.iml
+ocr-web/target/
+ocr-web/.idea/
+ocr-web/ocr-web.iml
