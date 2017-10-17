@@ -13,6 +13,10 @@
         http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
+
+    <!-- 配置注解的开启模式 -->
+    <context:annotation-config></context:annotation-config>
+
     <!-- 将当前base-package的默认包作为控制包 -->
     <context:component-scan base-package="com.wbkit.action"/>
 

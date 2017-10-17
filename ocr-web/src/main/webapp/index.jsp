@@ -11,6 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-    hello everyone!hello
+    <form action="${pageContext.request.contextPath}/upload/uploadImgs.do" method="post">
+        填写内容：<input type="text" name="hello" />
+        <input type="submit" value="helo"/>
+    </form>
 </body>
 </html>

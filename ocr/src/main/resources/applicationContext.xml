@@ -8,11 +8,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
 
-	<!-- 配置注解的开启模式 -->
-	<context:annotation-config></context:annotation-config>
-	
-
-
 	<!-- 加载配置文件的两种模式，1、util的模式，2、bean实例的模式，都是可以的 -->
 	<!--	<util:properties id="jdbcConfiguration" location="classpath:com/yarcl/properties/config.properties"/>-->
 	<bean id="jdbcConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
@@ -34,6 +29,6 @@
 	</bean>
 
 	<import resource="applicationContext-bean.xml"/>
-	<import resource="spring-mvc.xml"/>
+	<!--<import resource="spring-mvc.xml"/>-->
 
 </beans>
