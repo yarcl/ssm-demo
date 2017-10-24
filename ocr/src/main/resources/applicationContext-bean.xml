@@ -51,21 +51,21 @@
 	&lt;!&ndash; RoleServiceImpl &ndash;&gt;
 	<bean id="roleService" class="com.xqkj.service.impl.RoleServiceImpl">
 		<property name="roleDao" ref="rd"></property>
-	</bean>
+	</bean>-->
 
-	&lt;!&ndash; RazorMenu &ndash;&gt;
-	<bean id="rm" class="org.mybatis.spring.dao.MapperFactoryBean">
-		&lt;!&ndash; 创建实现类  是哪个 接口的 &ndash;&gt;
+
+	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<!-- 创建实现类  是哪个 接口的 -->
 		<property name="mapperInterface">
-			<value>com.xqkj.dao.MenuDao</value>
+			<value>com.wbkit.dao.UserMapper</value>
 		</property>
-		&lt;!&ndash; （根据sessionFactory）引入配置文件 &ndash;&gt;
+		<!-- （根据sessionFactory）引入配置文件 -->
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 	</bean>
-	&lt;!&ndash; MenuServiceImpl &ndash;&gt;
-	<bean id="menuService" class="com.xqkj.service.impl.MenuServiceImpl">
-		<property name="menuDao" ref="rm"></property>
-	</bean>-->
+
+	<bean id="userService" class="com.wbkit.service.impl.UserServiceImpl">
+
+	</bean>
 
 
 

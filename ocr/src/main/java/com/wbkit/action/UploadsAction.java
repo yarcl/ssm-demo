@@ -17,6 +17,7 @@ import java.util.List;
 public class UploadsAction {
 
 
+
     @RequestMapping("/uploadImgs.do")
     public ModelAndView uploadFiles(@RequestParam(value = "files", required = true) List<MultipartFile> files, ModelAndView mav){
 
