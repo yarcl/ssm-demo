@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Created by Administrator on 2017/12/25.
  */
 @Controller
-@RequestMapping("/ocr-web/")
+@RequestMapping("/")
 public class LoginAction {
 
     @Autowired
