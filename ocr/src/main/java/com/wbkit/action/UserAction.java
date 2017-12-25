@@ -20,12 +20,11 @@ public class UserAction {
     @Qualifier("userService")
     private UserService userService;
 
-    @RequestMapping(value="/login.do", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
+    /*@RequestMapping(value="/login.do", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     public ModelAndView login(ModelAndView mav,String userName, String userPwd){
-        UserBean userBean = userService.login(new UserBean(0 , userName, userPwd));
-        System.out.println(userBean.getId());
-        System.out.println("hello");
+        UserBean userBean = userService.login(new UserBean(userName, userPwd));
+
         return mav;
-    }
+    }*/
 
 }

@@ -17,6 +17,10 @@ public class UserServiceImpl implements UserService {
     @Qualifier("userMapper")
     private UserMapper userMapper;
 
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
     public UserBean login(UserBean userBean) {
         return userMapper.login(userBean);
     }
