@@ -123,11 +123,11 @@
 
 
     <!-- 格式化对象，方便输出日志 -->
-    <dependency>
+    <!--<dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>
       <version>1.1.41</version>
-    </dependency>
+    </dependency>-->
 
 
     <dependency>
@@ -159,12 +159,12 @@
       <artifactId>commons-io</artifactId>
       <version>2.4</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>com.oracle</groupId>
       <artifactId>ojdbc6</artifactId>
       <version>11.2.0.2.0</version>
     </dependency>
-
+-->
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>

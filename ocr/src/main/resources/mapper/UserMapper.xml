@@ -21,7 +21,7 @@
 
         <select id="login" parameterType="com.wbkit.entity.UserBean" resultMap="rm">
 
-            select <include refid="allColumn"/> from razor_user where login_name = #{loginName} and login_pwd = #{loginPwd}
+            select <include refid="allColumn"/> from RAZOR_USER where login_name = #{loginName} and login_pwd = #{loginPwd}
 
         </select>
 		
