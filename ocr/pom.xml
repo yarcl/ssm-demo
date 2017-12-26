@@ -252,7 +252,7 @@
     </repositories>
 
     <build>
-        <finalName>demo</finalName>
+        <finalName>ocr</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
