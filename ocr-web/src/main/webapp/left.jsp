@@ -97,7 +97,7 @@
             </ul>
         </div>
         <div class="col-md-10">
-            <iframe src="page/user/personInfo.jsp" name="product-main" frameborder="0"  width="100%" height="600" style="border-left: solid cornsilk"/>
+            <iframe src="${pageContext.request.contextPath}/page/user/personInfo.jsp" name="product-main" frameborder="0"  width="100%" height="600" style="border-left: solid cornsilk"/>
         </div>
     </div>
 </div>

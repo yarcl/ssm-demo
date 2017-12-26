@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css" type="text/css">
 <div class="razor-nav navbar">
 
-    <div class="logo"><img src="img/global.logo"/><span class="logo-title">南京西桥科技</span></div>
+    <div class="logo"><img src="${pageContext.request.contextPath}/img/global.logo"/><span class="logo-title">个人后台管理</span></div>
     <div class="nav-right">
         <ul>
             <li><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<a href="#">${user.name}</a></li>
