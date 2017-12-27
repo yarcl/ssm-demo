@@ -25,6 +25,10 @@ public class MenuAction {
     public ModelAndView allMenuInfo(ModelAndView mav, String nowPage){
         if(nowPage!=null && !"".equals(nowPage)){
             pageBean.setNowPage(Integer.parseInt(nowPage));
+            if(pageBean.getNowPage()>pageBean.getTotalPage()){
+                pageBean.setNowPage(pageBean.getTotalPage());
+                mav.addObject("state", "overRange");
+            }
         }
         List<MenuBean> menuList = menuService.allMenuInfo(pageBean);
         pageBean.setCount(menuService.getMenuCount());

@@ -35,7 +35,7 @@
                     <td>${item.loginName}</td>
                     <td>${item.name}</td>
                     <td>${item.roleId}</td>
-                    <td>${item.isActive}</td>
+                    <td>${item.isActive=='1'?'启用':'禁用'}</td>
                     <td>
                         <c:if test="${user.roleId==0}">
                             <a href="#" class="btn btn-sm btn-default">密码</a>

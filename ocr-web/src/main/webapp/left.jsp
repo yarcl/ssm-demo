@@ -5,7 +5,7 @@
   Time: 17:01
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" contentType="text/html;charset=UTF-8" errorPage="${pageContext.request.contextPath}/500.html"  %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
@@ -13,9 +13,9 @@
 <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 
-<div class="container-fluid">
+<div class="container-fluid" style="height: 800px;">
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-1">
             <ul id="main-nav" class="nav nav-tabs nav-stacked">
                 <li class="active">
                     <a href="#">
@@ -96,7 +96,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-11">
             <iframe src="${pageContext.request.contextPath}/page/user/personInfo.jsp" name="product-main" frameborder="0"  width="100%" height="600" style="border-left: solid cornsilk"/>
         </div>
     </div>

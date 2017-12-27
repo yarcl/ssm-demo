@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="${pageContext.request.contextPath}/500.html" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="page" uri="http://com.xqkj/pageTag" %>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" type="text/css">
@@ -50,3 +50,10 @@
         <page:pageTag url="${pageContext.request.contextPath}/menu/allMenuInfo.do?" page="${page}"/>
     </div>
 </div>
+
+<script type="text/javascript">
+    var state  = '${state}';
+    if(state === 'overRange'){
+        alert('请输入正常范围的数字!');
+    }
+</script>

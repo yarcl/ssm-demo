@@ -30,16 +30,31 @@ public class LoginAction {
 
         UserBean user = userService.login(new UserBean(loginName, loginPwd));
 
-        if(user!=null){
+        if(user!=null&&"1".equals(user.getIsActive())){
             user.setLoginPwd("");
             mav.addObject("user", user);
+            mav.setViewName("/index");
+        } else if(user!=null&&"0".equals(user.getIsActive())){
+            mav.setViewName("/login");
+            mav.addObject("state", "0");
+        } else {
+            mav.setViewName("/login");
+            mav.addObject("state", "error");
+        }
+        return mav;
+    }
 
+    @RequestMapping(value="/login.do", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
+    public ModelAndView loginBack(HttpServletRequest request, ModelAndView mav){
+        HttpSession session = request.getSession();
+        if(session!=null){
             mav.setViewName("/index");
         } else {
             mav.setViewName("/login");
         }
         return mav;
     }
+
     @RequestMapping(value="/loginOut.do", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
     public ModelAndView loginOut(ModelAndView mav, HttpServletRequest request){
         HttpSession session = request.getSession();

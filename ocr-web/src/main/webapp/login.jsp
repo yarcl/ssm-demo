@@ -5,7 +5,7 @@
   Time: 13:45
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="${pageContext.request.contextPath}/500.html" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,5 +37,13 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var state = '${state}';
+        if(state === '0') {
+            alert("该用户已被禁用，请联系管理员！");
+        } else if(state === 'error'){
+            alert("用户名密码错误，请重新输入！");
+        }
+    </script>
 </body>
 </html>

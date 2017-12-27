@@ -35,7 +35,7 @@
                     <td>
                         <select name="isActive" required>
                             <option value="1" ${user.isActive=='1'?'selected':''}>启用</option>
-                            <option value="2" ${user.isActive=='2'?'selected':''}>停用</option>
+                            <option value="2" ${user.isActive=='0'?'selected':''}>禁用</option>
                         </select>
                     </td>
                 </tr>
