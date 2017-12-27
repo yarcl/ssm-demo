@@ -3,28 +3,45 @@ package com.wbkit.action;
 import com.wbkit.entity.UserBean;
 import com.wbkit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * Created by Administrator on 2017/10/16.
+ * Created by Administrator on 2017/9/20.
  */
 @Controller
 @RequestMapping("/user")
+@SessionAttributes({"user"})
 public class UserAction {
 
     @Autowired
-    @Qualifier("userService")
     private UserService userService;
 
-    /*@RequestMapping(value="/login.do", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
-    public ModelAndView login(ModelAndView mav,String userName, String userPwd){
-        UserBean userBean = userService.login(new UserBean(userName, userPwd));
+    @RequestMapping(value = "/editPersonInfo.do", method = RequestMethod.POST)
+    public ModelAndView editUserInfo(UserBean user, ModelAndView mav){
+
+        if(user!=null){
+            int result = userService.updateUser(user);
+            user = userService.getUserById(user.getUserId());
+            mav.addObject("user", user);
+        }
+        mav.setViewName("/page/user/personInfo");
 
         return mav;
-    }*/
+    }
+
+    @RequestMapping(value = "/editPassword.do", method = RequestMethod.POST)
+    public ModelAndView editPassword(String newPwd, String userId, ModelAndView mav){
+
+        //System.out.println(newPwd);
+
+        userService.updatePassword(userId, newPwd);
+        mav.setViewName("/page/user/personInfo");
+
+        return mav;
+    }
 
 }

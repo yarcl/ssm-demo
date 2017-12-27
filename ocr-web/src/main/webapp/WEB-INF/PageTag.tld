@@ -9,7 +9,7 @@
  
  <tag>
  	<name>pageTag</name>
- 	<tag-class>com.xqkj.util.PageTag</tag-class>
+ 	<tag-class>com.wbkit.util.PageTag</tag-class>
  	<body-content>empty</body-content>
  	<attribute>
  		<name>url</name>

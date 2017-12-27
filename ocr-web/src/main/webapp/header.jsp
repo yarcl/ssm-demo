@@ -16,7 +16,7 @@
         <ul>
             <li><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<a href="#">${user.name}</a></li>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <li><a href="${pageContext.request.contextPath}/loginOut.do">退出</a></li>
+            <li><a href="${pageContext.request.contextPath}/login/loginOut.do">退出</a></li>
         </ul>
     </div>
 </div>

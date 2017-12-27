@@ -21,6 +21,11 @@
 		<property name="url" value="#{jdbcConfiguration.url}"></property>
 		<property name="username" value="#{jdbcConfiguration.username}"></property>
 		<property name="password" value="#{jdbcConfiguration.password}"></property>
+		<property name="validationQuery" value="#{jdbcConfiguration.validationQuery}"></property>
+		<property name="testWhileIdle" value="#{jdbcConfiguration.testWhileIdle}"></property>
+		<property name="timeBetweenEvictionRunsMillis" value="#{jdbcConfiguration.timeBetweenEvictionRunsMillis}"></property>
+		<property name="minEvictableIdleTimeMillis" value="#{jdbcConfiguration.minEvictableIdleTimeMillis}"></property>
+		<property name="testOnBorrow" value="#{jdbcConfiguration.testOnBorrow}"></property>
 	</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

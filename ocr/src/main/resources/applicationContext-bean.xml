@@ -21,6 +21,44 @@
 		<property name="userMapper" ref="userMapper"></property>
 	</bean>
 
+	<bean id="roleMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<!-- 创建实现类  是哪个 接口的 -->
+		<property name="mapperInterface">
+			<value>com.wbkit.dao.RoleMapper</value>
+		</property>
+		<!-- （根据sessionFactory）引入配置文件 -->
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+
+	<bean id="roleService" class="com.wbkit.service.impl.RoleServiceImpl">
+		<property name="roleMapper" ref="roleMapper"></property>
+	</bean>
+
+	<bean id="menuMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<!-- 创建实现类  是哪个 接口的 -->
+		<property name="mapperInterface">
+			<value>com.wbkit.dao.MenuMapper</value>
+		</property>
+		<!-- （根据sessionFactory）引入配置文件 -->
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+
+	<bean id="menuService" class="com.wbkit.service.impl.MenuServiceImpl">
+		<property name="menuMapper" ref="menuMapper"></property>
+	</bean>
+
+	<bean id="productMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<!-- 创建实现类  是哪个 接口的 -->
+		<property name="mapperInterface">
+			<value>com.wbkit.dao.ProductMapper</value>
+		</property>
+		<!-- （根据sessionFactory）引入配置文件 -->
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+
+	<bean id="productService" class="com.wbkit.service.impl.ProductServiceImpl">
+		<property name="productMapper" ref="productMapper"></property>
+	</bean>
 
 
 </beans>
